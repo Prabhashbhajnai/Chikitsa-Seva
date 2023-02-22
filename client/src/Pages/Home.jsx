@@ -1,7 +1,7 @@
 import React from 'react'
 
 // components
-import AppointmentCard from '../components/Home/AppoointmentCard'
+import AppointmentCard from '../components/Home/AppointmentCard'
 
 const Home = () => {
     return (
