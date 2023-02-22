@@ -9,7 +9,7 @@ const SidebarTabs = (props) => {
     const { id } = useParams()
 
     return (
-        <Link to={`/${props.route}`} style={{ textDecoration: 'none', color: 'black' }}>
+        <Link to={`${props.route}`} style={{ textDecoration: 'none', color: 'black' }}>
             <div className={classnames("text-gray-500 font-light", { "text-red-400 font-semibold": props.isActive, })}>
                 <h3 className="text-lg font-medium">{props.icon} {props.title}</h3>
             </div>
