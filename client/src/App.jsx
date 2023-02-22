@@ -5,6 +5,7 @@ import HomeLayout from './Layout/Home.Layout';
 
 // pages
 import Home from './Pages/Home';
+import DiseasePrediction from './Pages/DiseasePrediction';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Routes>
         <Route path='/' element={<HomeLayout />}>
           <Route path='/' element={<Home />}/>
+          <Route path='/DiseasePrediction' element={<DiseasePrediction />}/>
         </Route>
       </Routes>
     </>
