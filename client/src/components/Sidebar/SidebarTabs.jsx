@@ -48,7 +48,7 @@ const SidebarTabsContainer = (props) => {
         },
         {
             icon: GrContactInfo,
-            title: "Disease Prediction using AI",
+            title: "Disease Prediction AI",
             route: '/DiseasePrediction',
             isActive: currentPath.includes("/contacts")
         },
