@@ -82,7 +82,7 @@ const DiseasePrediction = () => {
                             <tbody>
                                 {symptoms.map((total) => {//mapping data from symptoms
                                     return (
-                                        <tr key={total.id} className="even:bg-slate-200 odd:bg-slate-100 text-black ">
+                                        <tr key={total.id} className="even:bg-slate-200 odd:bg-slate-100 text-black  hover:bg-green-100">
                                             <td className="m-2"><input id="check" type="checkbox" className="m-2 w-7 h-7 rounded focus:bg-black" /></td>
                                             <td className="w-full"><div className="" id={total.id}>{total.str}</div></td>
                                         </tr>
