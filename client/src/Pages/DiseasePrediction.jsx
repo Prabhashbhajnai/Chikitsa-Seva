@@ -2,7 +2,7 @@ import symptoms from "../data/Symptoms";
 import Modal from 'react-modal'
 import { useState } from "react";
 Modal.setAppElement('#root');//for accesibility
-var diagnosis = "hello"; // default value
+var diagnosis = "NULL"; // default value
 
 const DiseasePrediction = () => {
 
@@ -100,19 +100,20 @@ const DiseasePrediction = () => {
 
                 </div> 
                 <div className="flex flex-row  justify-center items-center ">  
-                    <Modal className="justify-center items-center bg-slate-100 w-fit h-fit mt-20 mr-auto ml-auto border-solid border-2 border-black pl-20 pr-20 pt-5 pb-5  rounded-2xl" isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)}>
-                        <div> <h1 className="font-bold">You may have</h1></div>
-                        <div><h2 className="text-2xl font-bold">{diagnosis}</h2></div>
-                        <div><p className="text-red-500 font-bold">NOTE :This is predicted using an AI</p></div>
-                        <div><p className="text-red-500 font-bold">Please contact a health professional</p></div>
-                        <div><button className="bg-violet-500 text-white hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 mt-5 p-5 rounded-2xl" onClick={() => setModalIsOpen(false)}>Close</button></div>
+                    <Modal className=" bg-slate-100 flex flex-col w-fit h-fit mt-20 mr-auto ml-auto border-solid border-2 border-black pl-20 pr-20 pt-5 pb-5  rounded-2xl" isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)}>
+                        <div className="flex justify-center items-center"> <h1 className="font-bold">You may have</h1></div>
+                        <div className="flex justify-center items-center"><h2 className="text-2xl font-bold">{diagnosis}</h2></div>
+                        <br />
+                        <div className="flex justify-center items-center"><p className="text-red-500 font-bold">NOTE :This is predicted using an AI</p></div>
+                        <div className="flex justify-center items-center"><p className="text-red-500 font-bold">Please contact a health professional</p></div>
+                        <div className=" flex justify-center items-center"><button className="text-white border-solid border-2 border-black font-bold bg-violet-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 mt-5 p-5 rounded-2xl" onClick={() => setModalIsOpen(false)}>Close</button></div>
 
                     </Modal>
                     <div className="flex flex-row  justify-center items-center">
                         <Modal className="justify-center items-center mt-20 mr-auto ml-auto h-fit w-fit bg-slate" isOpen={isloading} onRequestClose={() => isloading(false)}>
                             <div class="">
                                 <div class="flex justify-center items-center w-20 h-20 overflow-hidden">
-                                    <img class="h-20 w-20" src="https://icons8.com/preloaders/preloaders/1488/Iphone-spinner-2.gif" alt=""></img>
+                                    <img class="h-20 w-20" src="https://icons8.com/preloaders/preloaders/1488/Iphone-spinner-2.gif" alt="Loading.."></img>
                                 </div>
                             </div>
                         </Modal>
