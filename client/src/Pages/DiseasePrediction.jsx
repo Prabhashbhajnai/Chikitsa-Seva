@@ -2,10 +2,10 @@ import symptoms from "../data/Symptoms";
 
 
 function GetData() {
-    var checkboxes = document.getElementsByID("check");
+    var checkboxes = document.getElementsByTagName("input");
     var result = [];
 
-    for (var i = 0; i < checkboxes.length; i++) {
+    for (var i = 1; i < checkboxes.length; i++) {
         if (checkboxes[i].checked) {
             result.push(1);
             // console.log("1")
@@ -98,7 +98,7 @@ const DiseasePrediction = () => {
                             </tbody>
                         </table>
                         <div className="w-full flex justify-center ">
-                        <button id="getData" className="bg-violet-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 mt-5 p-5 rounded-2xl" onClick={GetCheck}>
+                        <button id="getData" className="bg-violet-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 mt-5 p-5 rounded-2xl" onClick={GetData}>
                             GET DIAGNOSIS
                         </button>
                         </div>
