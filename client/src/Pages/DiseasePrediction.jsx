@@ -58,12 +58,6 @@ const DiseasePrediction = () => {
     }
     return (
         <>
-
-
-
-
-
-
             <div className="m-5 p-5 text-2xl">
                 <h1>Please select any Symptoms you might have:</h1>
             </div>
@@ -91,7 +85,7 @@ const DiseasePrediction = () => {
                             </tbody>
                         </table>
                         <div className="w-full flex justify-center ">
-                            <button id="getData" className="bg-violet-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 mt-5 p-5 rounded-2xl" onClick={GetData}>
+                            <button id="getData" className="bg-violet-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 mt-5 p-5 rounded-2xl hover:bg-green-200 hover:font-bold" onClick={GetData}>
                                 GET DIAGNOSIS
                             </button>
                         </div>
@@ -106,7 +100,7 @@ const DiseasePrediction = () => {
                         <br />
                         <div className="flex justify-center items-center"><p className="text-red-500 font-bold">NOTE :This is predicted using an AI</p></div>
                         <div className="flex justify-center items-center"><p className="text-red-500 font-bold">Please contact a health professional</p></div>
-                        <div className=" flex justify-center items-center"><button className="text-white border-solid border-2 border-black font-bold bg-violet-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 mt-5 p-5 rounded-2xl" onClick={() => setModalIsOpen(false)}>Close</button></div>
+                        <div className=" flex justify-center items-center"><button className="text-white border-solid border-2 border-black font-bold bg-violet-500 hover:bg-red-600 hover:text-black active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 mt-5 p-5 rounded-2xl" onClick={() => setModalIsOpen(false)}>Close</button></div>
 
                     </Modal>
                     <div className="flex flex-row  justify-center items-center">
