@@ -1,3 +1,8 @@
+//IMPORTANT NOTE-->
+//to run this first run main.py in the server folder and keep it in running state for this to be functional
+//or else this page won't load any results and will just show loading icon
+
+
 import symptoms from "../data/Symptoms";
 import Modal from 'react-modal'
 import { useState } from "react";
