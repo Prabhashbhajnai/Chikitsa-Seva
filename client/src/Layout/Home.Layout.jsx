@@ -9,11 +9,11 @@ const HomeLayout = () => {
     return (
         <>
             <Navbar />
-            <div className='flex'>
-                <div className="my-4 border-r-2 border-grey-100 w-1/5 sticky">
+            <div className='flex w-full gap-5'>
+                <div className="border-r-2 border-grey-100 fixed w-1/5">
                     <Sidebar />
                 </div>
-                <div className='my-4 ml-4 w-4/5'>
+                <div className='pl-5 my-4 ml-auto w-4/5 right-0 '>
                     <Outlet />
                 </div>
             </div>
