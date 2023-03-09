@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./App.css";
+import "./OrganDonation.css";
 
 function OrganDonation() {
   const [name, setName] = useState("");
