@@ -64,7 +64,7 @@ const DiseasePrediction = () => {
     return (
         <>
             <div className="m-5 p-5 text-2xl">
-                <h1>Please select any Symptoms you might have:</h1>
+                <h1 className="font-bold">Please select any Symptoms you might have:</h1>
             </div>
 
             <div className="p-5 m-5">
@@ -83,14 +83,14 @@ const DiseasePrediction = () => {
                                     return (
                                         <tr key={total.id} className="even:bg-slate-200 odd:bg-slate-100 text-black  hover:bg-green-100">
                                             <td className="m-2"><input id="check" type="checkbox" className="m-2 w-7 h-7 rounded focus:bg-black" /></td>
-                                            <td className="w-full"><div className="" id={total.id}>{total.str}</div></td>
+                                            <td className="w-full"><div className="font-bold" id={total.id}>{total.str}</div></td>
                                         </tr>
                                     );
                                 })}
                             </tbody>
                         </table>
                         <div className="w-full flex justify-center ">
-                            <button id="getData" className="bg-violet-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 mt-5 p-5 rounded-2xl hover:bg-green-200 hover:font-bold" onClick={GetData}>
+                            <button id="getData" className="bg-violet-500  active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 mt-5 p-5 rounded-2xl hover:bg-green-200 hover:font-bold" onClick={GetData}>
                                 GET DIAGNOSIS
                             </button>
                         </div>
@@ -99,7 +99,7 @@ const DiseasePrediction = () => {
 
                 </div> 
                 <div className="flex flex-row  justify-center items-center ">  
-                    <Modal className=" bg-slate-100 flex flex-col w-fit h-fit mt-20 mr-auto ml-auto border-solid border-2 border-black pl-20 pr-20 pt-5 pb-5  rounded-2xl" isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)}>
+                    <Modal className=" bg-slate-100 flex flex-col w-fit h-fit mt-40 mr-auto ml-auto border-solid border-2 border-black pl-20 pr-20 pt-5 pb-5  rounded-2xl" isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)}>
                         <div className="flex justify-center items-center"> <h1 className="font-bold">You may have</h1></div>
                         <div className="flex justify-center items-center"><h2 className="text-2xl font-bold">{diagnosis}</h2></div>
                         <br />
@@ -109,7 +109,7 @@ const DiseasePrediction = () => {
 
                     </Modal>
                     <div className="flex flex-row  justify-center items-center">
-                        <Modal className="justify-center items-center mt-20 mr-auto ml-auto h-fit w-fit bg-slate" isOpen={isloading} onRequestClose={() => isloading(false)}>
+                        <Modal className="justify-center items-center mt-40 mr-auto ml-auto h-fit w-fit bg-slate" isOpen={isloading} onRequestClose={() => isloading(false)}>
                             <div class="">
                                 <div class="flex justify-center items-center w-20 h-20 overflow-hidden">
                                     <img class="h-20 w-20" src="https://icons8.com/preloaders/preloaders/1488/Iphone-spinner-2.gif" alt="Loading.."></img>
