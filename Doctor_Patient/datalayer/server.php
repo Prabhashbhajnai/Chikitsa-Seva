@@ -324,7 +324,6 @@ if (empty($adminpassword)) {
 }
 }
 
-
 	
 
  if (isset($_POST['sendfeedback'])) {
