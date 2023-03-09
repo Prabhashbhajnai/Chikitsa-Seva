@@ -1,5 +1,4 @@
 const symptoms = [
-    { id: 1, str: "itching" },
     { id: 2, str: "skin Rash" },
     { id: 3, str: "Nodal Skin Eruptions" },
     { id: 4, str: "Continuous Sneezing" },
@@ -130,6 +129,7 @@ const symptoms = [
     { id: 129, str: "Inflammatory Nails" },
     { id: 130, str: "Blister" },
     { id: 131, str: "Red Sore Around Nose" },
+    { id: 132, str: "Yellow crust ooze" },
 
 
 
