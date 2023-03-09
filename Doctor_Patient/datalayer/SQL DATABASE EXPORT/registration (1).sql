@@ -159,7 +159,6 @@ ALTER TABLE `doctor`
 --
 ALTER TABLE `donor`
   ADD PRIMARY KEY (`donarID`);
-
 --
 -- Indexes for table `feedback`
 --
