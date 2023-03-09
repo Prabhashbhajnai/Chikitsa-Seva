@@ -6,8 +6,8 @@ import HomeLayout from './Layout/Home.Layout';
 // pages
 import Home from './Pages/Home';
 import DiseasePrediction from './Pages/DiseasePrediction';
-import OrganDonation from './Pages/OrganDonation';
-
+// import OrganDonation from './Pages/OrganDonation';
+import Payments from './Pages/Payments';
 
 function App() {
   return (
@@ -16,7 +16,8 @@ function App() {
         <Route path='/' element={<HomeLayout />}>
           <Route path='/' element={<Home />}/>
           <Route path='/DiseasePrediction' element={<DiseasePrediction />}/>
-           <Route path='/OrganDonation' element={<OrganDonation/>}/> 
+          <Route path='/payments' element={<Payments />}/>
+           {/* <Route path='/OrganDonation' element={<OrganDonation/>}/>  */}
         </Route>
       </Routes>
     </>
