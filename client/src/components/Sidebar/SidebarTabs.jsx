@@ -76,6 +76,12 @@ const SidebarTabsContainer = (props) => {
             route: 'forms',
             isActive: currentPath.includes("/forms")
         },
+        {
+            icon: <RiTestTubeFill />,
+            title: "Organ Donation",
+            route: 'OrganDonation',
+            isActive: currentPath.includes("/OrganDonation")
+        },
     ]
 
     return (
