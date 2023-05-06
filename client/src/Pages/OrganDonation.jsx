@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 
 function OrganDonation() {
   const [name, setName] = useState("");
