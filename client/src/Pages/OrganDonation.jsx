@@ -11,13 +11,13 @@ function OrganDonation() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(`Name: ${name}`);
-    console.log(`Age: ${age}`);
-    console.log(`Date of birth: ${dob}`);
-    console.log(`Phone number: ${phone}`);
-    console.log(`Email: ${email}`);
-    console.log(`Medication: ${medication}`);
-    console.log(`Address: ${address}`);
+    console.log(`Nam: ${name}`);
+    console.log(`Ag: ${age}`);
+    console.log(`Dat of birth: ${dob}`);
+    console.log(`Phon number: ${phone}`);
+    console.log(`Emai: ${email}`);
+    console.log(`Medicatio: ${medication}`);
+    console.log(`Addres: ${address}`);
   };
 
   return (
