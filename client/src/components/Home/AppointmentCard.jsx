@@ -5,10 +5,7 @@ import { BsCircle } from 'react-icons/bs'
 const AppointmentCard = (props) => {
     return (
         <>
-            <div className='bg-white mx-2 p-2 px-4 w-full mb-2 rounded-2xl transition shadow-lg duration-700 ease-in-out hover:shadow-2xl  md:w-1/2 lg:w-1/4'>
-                <div className='flex items-center justify-between'>
-                    <h1 className='text-2xl font-semibold'>Appointment</h1> <CiCalendar className='text-slate-500' />
-                </div>
+            <div className='bg-white mx-2 p-4 px-4 w-full mb-2 rounded-2xl transition shadow-lg duration-700 ease-in-out hover:shadow-2xl  md:w-1/2 lg:w-1/4'>
                 <div className='mt-3 border-b-2' />
                 <div className='h-3/4 w-full content-start'>
                     <div className='flex items-center gap-3'>
@@ -21,32 +18,31 @@ const AppointmentCard = (props) => {
                         </div>
                         <div className='w-3/4 mt-5 items-start'>
                             <h1 className='font-semibold'>Dr. {props.name}</h1>
-                            <h1 className='text-slate-400 font-medium'>Physician</h1>
+                            <h1 className='text-slate-400 font-medium'>{props.post}</h1>
                             <div className='border rounded-xl w-1/2'>
                                 <h1 className='flex items-center justify-around'><BsCircle className='text-xs rounded-full bg-green-400' /> Active</h1>
                             </div>
                         </div>
                     </div>
-                    <div className='flex justify-around mt-5'>
-                        <div className='flex flex-col juatify-between gap-5 mt-3'>
-                            <div className='w-2/5'>
+                    <div className='flex justify-between mt-5'>
+                        <div className='flex flex-col gap-5 mt-3 w-1/2'>
+                            <div className='w-fit'>
                                 <h1 className='text-slate-400 font-medium'>Date</h1>
                                 <h1 className='text-[13px] font-medium'>{props.date}</h1>
                             </div>
-                            <div className='w-2/5'>
+                            <div className='w-fit'>
                                 <h1 className='text-slate-400 font-medium'>Address</h1>
                                 <h1 className='text-[13px] font-medium'>{props.address}</h1>
                             </div>
                         </div>
-                        <div className='flex flex-col gap-5 mt-3'>
-                            <div className='w-2/5'>
+                        <div className='flex flex-col gap-5 mt-3 w-1/2'>
+                            <div className='w-fit'>
                                 <h1 className='text-slate-400 font-medium'>Time</h1>
                                 <h1 className='text-[13px] font-medium'>{props.time}</h1>
                             </div>
-                            <div className='w-full'>
+                            <div className='w-fit'>
                                 <h1 className='text-slate-400 font-medium'>Area of Interest</h1>
-                                <h1 className='text-[13px] font-medium'>Men's Health</h1>
-                                <h1 className='text-[13px] font-medium'>Women's Health</h1>
+                                <h1 className='text-[13px] font-medium'>{props.areaofintrest}</h1>
                             </div>
                         </div>
                     </div>
