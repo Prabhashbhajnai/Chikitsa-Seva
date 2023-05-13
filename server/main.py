@@ -27,7 +27,7 @@ def result():
         training = pd.read_csv(url, index_col=0) 
     
 
-    # removing unnesecarry data points
+    # removing target variables
         training.drop('Unnamed: 133', axis=1, inplace=True)
 
     # test train split 
