@@ -28,8 +28,8 @@ const SidebarTabsContainer = (props) => {
         {
             icon: <RiHome5Line />,
             title: "Home",
-            route: '',
-            isActive: currentPath.includes("")
+            route: 'home',
+            isActive: currentPath.includes("/home")
         },
         {
             icon: <RiCalendarLine />,
@@ -75,6 +75,12 @@ const SidebarTabsContainer = (props) => {
             title: "Forms",
             route: 'forms',
             isActive: currentPath.includes("/forms")
+        },
+        {
+            icon: <RiTestTubeFill />,
+            title: "Organ Donation",
+            route: 'OrganDonation',
+            isActive: currentPath.includes("/OrganDonation")
         },
     ]
 
