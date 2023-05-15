@@ -43,12 +43,12 @@ const SidebarTabsContainer = (props) => {
             route: 'finddoctor',
             isActive: currentPath.includes("/finddoctor")
         },
-        {
-            icon: <GrContactInfo />,
-            title: "Contacts",
-            route: 'contacts',
-            isActive: currentPath.includes("/contacts")
-        },
+        // {
+        //     icon: <GrContactInfo />,
+        //     title: "Contacts",
+        //     route: 'contacts',
+        //     isActive: currentPath.includes("/contacts")
+        // },
         {
             icon: <GrContactInfo />,
             title: "Disease Prediction AI",
@@ -72,16 +72,11 @@ const SidebarTabsContainer = (props) => {
         },
         {
             icon: <FaWpforms />,
-            title: "Forms",
+            title: "Blood Donation",
             route: 'forms',
             isActive: currentPath.includes("/forms")
         },
-        {
-            icon: <RiTestTubeFill />,
-            title: "Organ Donation",
-            route: 'OrganDonation',
-            isActive: currentPath.includes("/OrganDonation")
-        },
+        
     ]
 
     return (
@@ -106,6 +101,13 @@ const SidebarTabsContainer = (props) => {
                         <h3 className="text-lg font-medium flex flex-col">Payments</h3>
                     </div>
                 </Link>
+                <h1 className='text-xl font-semibold text-gray-400'>Donor Services</h1>
+                <a href="https://chikitsa-seva-blood-bank.onrender.com/login" style={{ textDecoration: 'none', color: 'black' }}>
+                    <div className={classnames("text-gray-500 font-light flex items-center gap-3", { "text-red-400 font-semibold": props.isActive, })}>
+                        <h3 className='text-xl'><GoCreditCard /></h3>
+                        <h3 className="text-lg font-medium flex flex-col">Blood Donation</h3>
+                    </div>
+                </a>
 
             </div>
         </>
