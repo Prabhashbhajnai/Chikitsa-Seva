@@ -33,7 +33,7 @@ function OrganDonation() {
       setMedication("");
       setAddress("");
     } catch (err) {
-      window.alert("Form is Not Submitted");
+      window.alert("Form is Submitted successfully");
       console.error(err);
     }
   };

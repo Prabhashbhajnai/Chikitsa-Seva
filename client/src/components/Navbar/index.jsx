@@ -50,10 +50,10 @@ const LargeNav = () => {
                     </div>
                     <div className="flex gap-5">
                         <button className="text-gray-500 text-xl hover:text-gray-800">
-                            Login
+                            {/* Login */}
                         </button>
                         <button className="text-gray-500 text-xl hover:text-gray-800">
-                            Signup
+                            {/* Signup */}
                         </button>
                     </div>
                 </div>
