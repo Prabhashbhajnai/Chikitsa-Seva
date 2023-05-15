@@ -4,11 +4,17 @@ import { Fragment, useState, useRef } from "react";
 // assets
 import logo from "../../Assets/Logo.png"
 
-export default function PaymentModal({ isOpen, setIsOpen}) {
+export default function PaymentModal({ isOpen, setIsOpen }) {
     function closeModal() {
         setIsOpen(false);
     }
-    
+
+    const [message, setMessage] = useState('')
+
+    const handleChange = event => {
+        setMessage(event.target.value);
+    }
+
     const inputRef = useRef(null)
 
     const launchRazorPay = () => {
@@ -29,11 +35,6 @@ export default function PaymentModal({ isOpen, setIsOpen}) {
         let RazorPay = new window.Razorpay(options);
         RazorPay.open();
     };
-
-
-    // const handleClick = () => {
-    //     console.log(inputRef.current.value);
-    // }
 
     return (
         <>
@@ -93,14 +94,15 @@ export default function PaymentModal({ isOpen, setIsOpen}) {
                                         required
                                         className='bg-transparent border-b py-3 outline-none w-full focus:border-b transition-all items-center text-center'
                                         ref={inputRef}
+                                        onChange={handleChange}
+                                        value={message}
                                     />
                                     <button
                                         type="button"
                                         className="w-full inline-flex justify-center px-4 py-2 text-sm font-medium text-white bg-red-600 border border-transparent rounded-md hover:bg-red-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-red-500"
                                         onClick={launchRazorPay}
-                                        // onClick={handleClick}
                                     >
-                                        Pay ₹
+                                        Pay ₹{message}
                                     </button>
                                     <button
                                         type="button"
