@@ -72,7 +72,7 @@ const SidebarTabsContainer = (props) => {
         },
         {
             icon: <FaWpforms />,
-            title: "Blood Donation",
+            title: "Organ Donation",
             route: 'forms',
             isActive: currentPath.includes("/forms")
         },
@@ -102,7 +102,7 @@ const SidebarTabsContainer = (props) => {
                     </div>
                 </Link>
                 <h1 className='text-xl font-semibold text-gray-400'>Donor Services</h1>
-                <a href="https://chikitsa-seva-blood-bank.onrender.com/login" style={{ textDecoration: 'none', color: 'black' }}>
+                <a href="https://chikitsa-seva-blood-bank.onrender.com/login" style={{ textDecoration: 'none', color: 'black' }} target='blank'>
                     <div className={classnames("text-gray-500 font-light flex items-center gap-3", { "text-red-400 font-semibold": props.isActive, })}>
                         <h3 className='text-xl'><GoCreditCard /></h3>
                         <h3 className="text-lg font-medium flex flex-col">Blood Donation</h3>
