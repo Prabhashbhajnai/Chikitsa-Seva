@@ -70,12 +70,12 @@ const SidebarTabsContainer = (props) => {
             route: 'records',
             isActive: currentPath.includes("/records")
         },
-        {
-            icon: <FaWpforms />,
-            title: "Blood Donation",
-            route: 'forms',
-            isActive: currentPath.includes("/forms")
-        },
+        // {
+        //     icon: <FaWpforms />,
+        //     title: "Blood Donation",
+        //     route: 'forms',
+        //     isActive: currentPath.includes("/forms")
+        // },
         
     ]
 
