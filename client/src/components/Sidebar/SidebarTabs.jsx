@@ -96,7 +96,7 @@ const SidebarTabsContainer = (props) => {
 
                 <h1 className='text-xl font-semibold text-gray-400'>Finance</h1>
                 <Link to="/payments" style={{ textDecoration: 'none', color: 'black' }}>
-                    <div className={classnames("text-gray-500 font-light flex items-center gap-3", { "text-red-400 font-semibold": props.isActive, })}>
+                    <div className={classnames("text-gray-500 font-light flex items-center gap-3", { "text-red-400 font-semibold": currentPath.includes("/payments"), })}>
                         <h3 className='text-xl'><GoCreditCard /></h3>
                         <h3 className="text-lg font-medium flex flex-col">Payments</h3>
                     </div>
@@ -108,13 +108,6 @@ const SidebarTabsContainer = (props) => {
                         <h3 className="text-lg font-medium flex flex-col">Blood Donation</h3>
                     </div>
                 </a>
-                {/* <a href="https://172.25.190.246:3000" style={{ textDecoration: 'none', color: 'black' }} target='blank'>
-                    <div className={classnames("text-gray-500 font-light flex items-center gap-3", { "text-red-400 font-semibold": props.isActive, })}>
-                        <h3 className='text-xl'><FaWpforms /></h3>
-                        <h3 className="text-lg font-medium flex flex-col">Organ Donation</h3>
-                    </div>
-                </a> */}
-
             </div>
         </>
     );
