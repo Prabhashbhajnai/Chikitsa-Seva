@@ -17,12 +17,12 @@ const HospitalCard = (props) => {
                 <div className='h-2/3 w-full'>
                     <img
                         src={props.url}
-                        alt={props.name}
+                        alt='hospital'
                         className='h-full w-full'
                     />
                 </div>
                 <div className='h-1/3 w-full flex flex-col items-center gap-5'>
-                    <h1>AIIMS Delhi</h1>
+                    <h1>{props.name}</h1>
                     <button onClick={pay} className='bg-red-300 text-xl rounded-lg w-full'>Pay Now</button>
                 </div>
             </div>
