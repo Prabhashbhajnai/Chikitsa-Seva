@@ -6,6 +6,7 @@ function OrganDonation() {
   const [dob, setDob] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
+  const [donorPreference, setDonorPreference] = useState("");
   const [medication, setMedication] = useState("");
   const [address, setAddress] = useState("");
 
@@ -19,7 +20,7 @@ function OrganDonation() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ name, age, dob, phone, email, medication, address }),
+        body: JSON.stringify({ name, age, dob, phone, email, donorPreference, medication, address }),
       });
       const data = await response.json();
       window.alert("Form is Submitted");
@@ -30,10 +31,11 @@ function OrganDonation() {
       setDob("");
       setPhone("");
       setEmail("");
+      setDonorPreference("");
       setMedication("");
       setAddress("");
     } catch (err) {
-      window.alert("Form is Submitted successfully");
+      window.alert("Form is Not Submitted");
       console.error(err);
     }
   };
@@ -116,6 +118,22 @@ function OrganDonation() {
         className="w-full p-2 border border-gray-400 rounded-lg"
         />
         </div>
+
+        <div className="form-group mb-6">
+                  <label htmlFor="email" className="font-bold mb-2 block">
+                    Donor Preferences:
+                  </label>
+                  <input
+                    type="text"
+                    id="donorPreference"
+                    value={donorPreference}
+                    onChange={(e) => setDonorPreference(e.target.value)}
+        required
+        className="w-full p-2 border border-gray-400 rounded-lg"
+        />
+        </div>
+
+
         <div className="form-group mb-6">
         <label htmlFor="medication" className="font-bold mb-2 block">
         Medication:
